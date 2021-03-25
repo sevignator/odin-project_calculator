@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/calculator.js" defer></script>
+</head>
+
+<body>
+  <div id="calculator">
+    <div id="display">0</div>
+    <div id="top-row">
+      <div class="btn control" id="clear-btn">AC</div>
+      <div class="btn control" id="delete-btn">DEL</div>
+    </div>
+    <div id="numbers">
+      <div class="btn number" id="num-7" data-value="7">7</div>
+      <div class="btn number" id="num-8" data-value="8">8</div>
+      <div class="btn number" id="num-9" data-value="9">9</div>
+      <div class="btn number" id="num-4" data-value="4">4</div>
+      <div class="btn number" id="num-5" data-value="5">5</div>
+      <div class="btn number" id="num-6" data-value="6">6</div>
+      <div class="btn number" id="num-1" data-value="1">1</div>
+      <div class="btn number" id="num-2" data-value="2">2</div>
+      <div class="btn number" id="num-3" data-value="3">3</div>
+      <div class="btn number" id="num-0" data-value="0">0</div>
+      <div class="btn" id="decimal-btn">.</div>
+    </div>
+    <div id="right-column">
+      <div class="btn operator" id="divide-btn" data-symbol="/">÷</div>
+      <div class="btn operator" id="multiply-btn" data-symbol="*">×</div>
+      <div class="btn operator" id="subtract-btn" data-symbol="-">−</div>
+      <div class="btn operator" id="add-btn" data-symbol="+">+</div>
+      <div class="btn" id="equals-btn">=</div>
+    </div>
+  </div>
+</body>
+
+</html>

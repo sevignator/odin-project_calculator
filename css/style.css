@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --grid-gap: 8px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #272727;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1.4fr repeat(5, 1fr);
+  grid-template-areas:
+    "display display display display"
+    "top-row top-row top-row right-column"
+    "numbers numbers numbers right-column"
+    "numbers numbers numbers right-column"
+    "numbers numbers numbers right-column"
+    "numbers numbers numbers right-column";
+  width: 400px;
+  padding: 18px;
+  height: 600px;
+  border-radius: 10px;
+  background-color: steelblue;
+  overflow: hidden;
+  grid-gap: var(--grid-gap);
+}
+
+#display {
+  grid-area: display;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-color: #e6e6e6;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 4rem;
+}
+
+#top-row {
+  grid-area: top-row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: var(--grid-gap);
+}
+
+#clear-btn {
+  grid-column: 1 / span 2;
+}
+
+#numbers {
+  grid-area: numbers;
+  display: grid;
+  grid-gap: var(--grid-gap);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #c5d8e7;
+  border-radius: 4px;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
+}
+
+.btn:hover {
+  background-color: #afcae0;
+}
+
+.btn:active {
+ transform: scale(0.99);
+}
+
+#numbers #num-0 {
+  grid-column: 1 / span 2;
+}
+
+#right-column {
+  grid-area: right-column;
+  display: grid;
+  grid-gap: var(--grid-gap);
+}
+
+.infinity {
+  background: url("../imgs/infinite-cats.gif") no-repeat center;
+  background-size: cover;
+}
